@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.07" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-03-05T12:05:36" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Hello World Server" timestamp="2019-03-05T12:05:36" tests="0" file="/home/asharani/node/eclipse-workspace/samplenodejsproject/test.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="GET /" timestamp="2019-03-05T12:05:36" tests="2" file="/home/asharani/node/eclipse-workspace/samplenodejsproject/test.js" failures="0" time="0.07">
+    <testcase name="Hello World Server GET / returns status code 200" time="0.064" classname="returns status code 200">
+    </testcase>
+    <testcase name="Hello World Server GET / returns Hello World" time="0.006" classname="returns Hello World">
+    </testcase>
+  </testsuite>
+</testsuites>
