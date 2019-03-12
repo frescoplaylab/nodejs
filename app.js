@@ -1,15 +1,38 @@
-var express = require('express');
-var app = express();
-var exports = module.exports = {};
+class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    get height() {
+        return this._height;
+    }
+    set height(value) {
+        if (typeof value !== 'number') {
+            throw new Error('"height" must be a number.');
+        }
+        if (value < 0) {
+          throw new Error('Enter only positive value');
+        }
+        this._height = value;
+    }
 
-app.get('/', function(req, res){
-  res.send('Hello World');
-});
+    get width() {
+        return this._width;
+    }
 
-var server = app.listen(8000, function(){
-  console.log('Magic is happening on port 8000');
-});
+    set width(value) {
+        if (typeof value !== 'number') {
+            throw new Error('"width" must be a number.');
+        }
+        if (value < 0) {
+          throw new Error('Enter only positive value');
+        }
+        this._width = value;
+    }
 
-exports.closeServer = function(){
-  server.close();
-};
+    get area() {
+        return this.width * this.height;
+    }
+}
+
+module.exports = Rectangle;

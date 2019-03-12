@@ -1,26 +1,9 @@
-var request = require("request"),
-    assert = require('assert'),
-    helloWorld = require("./app.js"),
-    base_url = "http://localhost:8000/";
+let Rectangle = require('./app.js'),
+    assert = require('assert');
 
-
-describe("Hello World Server", function() {
-  describe("GET /", function() {
-    it("returns status code 200", function(done) {
-      request.get(base_url, function(error, response, body) {
-        //expect(response.statusCode).toBe(200);
-        assert.equal(200, response.statusCode);
-        done();
-      });
+describe('rectangle', function () {
+    it('calculates area', function () {
+        let r = new Rectangle(10,10);
+        assert.ok(r.area === 100);
     });
-
-    it("returns Hello World", function(done) {
-      request.get(base_url, function(error, response, body) {
-        //expect(body).toBe("Hello World");
-        assert.equal("Hello World", body);
-        helloWorld.closeServer();
-        done();
-      });
-    });
-  });
 });
